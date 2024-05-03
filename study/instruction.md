@@ -36,3 +36,8 @@
 
 - Live chat endpoints
   ![alt text](image-24.png)
+
+## Ep-3
+
+1. Run serverless and download the aws cli
+2. Configure the user service. 
