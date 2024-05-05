@@ -86,3 +86,10 @@
 7. Create successResponse and errorResponse in utils
    ![alt text](image-34.png)
    ![alt text](image-35.png)
+
+# 5 May
+
+## Ep-4 continued
+
+1. Create profile function in user services.
+2. Use always absolute path otherwise you will get error.

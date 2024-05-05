@@ -38,7 +38,7 @@ functions:
       - httpApi:
           path: /user
           method: put
- cart:
+  cart:
     handler: app/handler.cart
     events:
       - httpApi:
@@ -50,7 +50,7 @@ functions:
       - httpApi:
           path: /cart
           method: put
- payment:
+  payment:
     handler: app/handler.payment
     events:
       - httpApi:
