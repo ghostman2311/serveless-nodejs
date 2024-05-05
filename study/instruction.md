@@ -40,4 +40,49 @@
 ## Ep-3
 
 1. Run serverless and download the aws cli
-2. Configure the user service. 
+2. Configure the user service.
+3. Install ts in user service
+4. Install serverless offline
+   ![alt text](image-25.png)
+5. add typescript plugin
+   ![alt text](image-26.png)
+
+6. Now initialize the typescript using tsc --init.
+7. Install these packages
+   ![alt text](image-27.png)
+
+8. Configure the tsconfig.json
+9. delete index.js
+
+# 4 May
+
+## Ep-3
+
+1. Update the yaml file like this
+   ![alt text](image-28.png)
+
+2. Create handler.ts in app folder and write code like this
+   ![alt text](image-29.png)
+
+3. Add dev script "serverless offline"
+4. Please add async in the handler.
+
+## Ep-4 (continue @17:00)
+
+1. Add the remaining points
+   ![alt text](image-30.png)
+
+2. Create this directory structure
+   ![alt text](image-31.png)
+
+3. Refactor the code.
+4. Add user service and user repo code like this
+   ![alt text](image-32.png)
+
+5. Create dto folder in models.
+6. Add createUser in UserService like this
+   ![alt text](image-33.png)
+
+7. Create successResponse and errorResponse in utils
+   ![alt text](image-34.png)
+   ![alt text](image-35.png)
