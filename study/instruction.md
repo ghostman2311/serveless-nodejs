@@ -123,5 +123,22 @@
 ## Ep-5
 
 1. Create loginInput.ts and signUpInput.ts in dto
-2. 
+2. Add this code in above two files
+   ![alt text](image-42.png)
+   ![alt text](image-43.png)
 
+3. Install these libraries
+   ![alt text](image-44.png)
+
+4. Add plainToClass function like this
+   ![alt text](image-45.png)
+
+5. Create errors.ts file in utils
+   ![alt text](image-46.png)
+
+6. Add error validator in dto files like this
+   ![alt text](image-47.png)
+
+7. Also call AppValidation func. in userservice.
+
+8. 
