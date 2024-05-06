@@ -93,3 +93,35 @@
 
 1. Create profile function in user services.
 2. Use always absolute path otherwise you will get error.
+
+# 6 May
+
+## Ep-4 (Continued)
+
+1. Add middy plugin `npm install --save @middy/core`
+2. Install this middleware as well `npm install --save @middy/http-json-body-parser`
+3. Wrap the signup handler like this
+   ![alt text](image-36.png)
+4. Install these libraries
+   ![alt text](image-37.png)
+
+5. Update the user Service like this
+   ![alt text](image-38.png)
+
+6. Update the handler like this
+   ![alt text](image-39.png)
+
+7. Now create a dummy function in userRepo and use it like this in userService `await this.repo.createUserOp()`
+8. add `import reflect-metadata` in handler export file
+9. Add these things in yaml file
+   ![alt text](image-40.png)
+
+10. Configure the aws
+11. Add this script in package.json
+    ![alt text](image-41.png)
+
+## Ep-5
+
+1. Create loginInput.ts and signUpInput.ts in dto
+2. 
+
