@@ -140,5 +140,22 @@
    ![alt text](image-47.png)
 
 7. Also call AppValidation func. in userservice.
+   ![alt text](image-48.png)
 
-8. 
+8. Create UserModel in models folder
+   ![alt text](image-49.png)
+
+9. Update the userService like this for time being and also update the userRepo
+   ![alt text](image-50.png)
+   ![alt text](image-51.png)
+
+10. Install these libraries and create password.ts in utility
+    ![alt text](image-52.png)
+
+11. Add this code in password.ts file
+    ![alt text](image-53.png)
+
+12. Update the User Service like this
+    ![alt text](image-54.png)
+
+13. 

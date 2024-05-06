@@ -5,6 +5,7 @@ import { APIGatewayProxyEventV2 } from "aws-lambda";
 import { autoInjectable } from "tsyringe";
 import { SignupInput } from "../models/dto/SignupInput";
 import { AppValidationError } from "../utility/errors";
+import { getHashedPassword, getSalt } from "app/utility/password";
 
 @autoInjectable()
 export class UserService {
@@ -17,6 +18,15 @@ export class UserService {
     const input = plainToClass(SignupInput, event.body);
     const error = await AppValidationError(input);
     if (error) return errorResponse(404, error);
+    const salt = await getSalt();
+    const hashedPassword = await getHashedPassword(input.password, salt);
+    const data = await this.repository.createAccount({
+      email: input.email,
+      password: hashedPassword,
+      phone: input.phone,
+      userType: "BUYER",
+      salt,
+    });
     return successResponse(input);
   }
 
