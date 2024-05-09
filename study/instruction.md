@@ -158,4 +158,30 @@
 12. Update the User Service like this
     ![alt text](image-54.png)
 
-13. 
+13. Create docker-compose.yml in user service
+    ![alt text](image-55.png)
+
+# 7 May
+
+## Ep-5 (Continued)
+
+1. Create table using this query on postgres
+   ![alt text](image-56.png)
+
+2. Create Makefile
+   ![alt text](image-57.png)
+
+# 8 May
+
+## Ep-5 (Continued)
+
+1. Create databaseClient in utility and install `npm i pg @types/pg`
+   ![alt text](image-58.png)
+
+2. In user repo, add code like this
+   ![alt text](image-59.png)
+
+3. Wrap user service in try catch signup function
+   ![alt text](image-60.png)
+
+4. Test the signup api now and check the data is stored in db or not.
