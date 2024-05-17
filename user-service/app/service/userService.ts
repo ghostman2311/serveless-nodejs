@@ -7,6 +7,7 @@ import { SignupInput } from "../models/dto/SignupInput";
 import { AppValidationError } from "../utility/errors";
 import { getHashedPassword, getSalt } from "../utility/password";
 import { UserModel } from "../models/User";
+import { LoginInput } from "../models/dto/LoginInput";
 
 @autoInjectable()
 export class UserService {
@@ -29,6 +30,20 @@ export class UserService {
         userType: "BUYER",
         salt,
       });
+      return successResponse(data as UserModel);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(500, error);
+    }
+  }
+
+  async userLogin(event: APIGatewayProxyEventV2) {
+    try {
+      const input = plainToClass(LoginInput, event.body);
+      const error = await AppValidationError(input);
+      if (error) return errorResponse(404, error);
+      console.log(input)
+      const data = await this.repository.findAccount(input.email);
       return successResponse(data as UserModel);
     } catch (error) {
       console.log(error);

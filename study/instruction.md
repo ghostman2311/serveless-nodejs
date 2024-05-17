@@ -185,3 +185,20 @@
    ![alt text](image-60.png)
 
 4. Test the signup api now and check the data is stored in db or not.
+
+# 9 May
+
+## Ep-5 (Continued)
+
+1. Add findAccount function in user repo
+   ![alt text](image-61.png)
+
+2. Update the userLogin like this
+   ![alt text](image-62.png)
+
+3. Wrap the function in middy as well
+   ![alt text](image-63.png)
+
+
+# 17 May 
+

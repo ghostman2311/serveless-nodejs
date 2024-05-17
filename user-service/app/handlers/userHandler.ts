@@ -13,23 +13,12 @@ export const signup = middy((event: APIGatewayProxyEventV2) => {
   return service.createUser(event);
 }).use(bodyParser());
 
-export const login = async (event: APIGatewayProxyEventV2) => {
-  console.log(event);
-  return {
-    statusCode: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
-    body: JSON.stringify({
-      message: "response from signup",
-      data: {},
-    }),
-  };
-};
+export const login = middy((event: APIGatewayProxyEventV2) => {
+  return service.userLogin(event);
+}).use(bodyParser());
 
 export const profile = async (event: APIGatewayProxyEventV2) => {
   const httpMethod = event.requestContext.http.method.toLowerCase();
-  console.log(httpMethod, "httpMethodhttpMethodhttpMethod");
   if (httpMethod === "post") {
     return service.createProfile(event);
   } else if (httpMethod === "put") {
